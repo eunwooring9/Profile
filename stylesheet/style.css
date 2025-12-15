@@ -1,0 +1,307 @@
+/* 전체! */
+.profile {
+  width: 100%;
+  max-width: 1152px;
+  background-color: #222222;
+  padding: 37px;
+  margin: 0 auto;
+  font-family: pretendard;
+  box-sizing: border-box;
+}
+
+/* 박스 컬러 */
+.introduction,
+.experience-container,
+.skills-container,
+.hobbies,
+.contact,
+.education {
+  background-color: #e7e2df;
+}
+
+/* 상단 박스 */
+.introduction {
+  display: grid;
+  gap: 59px;
+  width: 100%;
+  height: 391px;
+  grid-template-columns: minmax(200px, 293px) 1fr;
+  padding: 30px 66px;
+}
+
+/* 프로필 사진 */
+.my-profile {
+  flex-shrink: 0;
+  width: 293px;
+  height: 330px;
+}
+
+.my-profile img {
+  width: 100%;
+  height: 100%;
+  box-shadow: 7px 10px rgba(0, 0, 0, 0.2);
+}
+
+.myname-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+/* 이름 */
+.myname-wrap {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.myname {
+  font-size: 65px;
+  font-weight: 700;
+}
+
+.myname::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 63px;
+
+  background-image: url("../img/Deco2.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin: 0 0 7px 4px;
+}
+
+/* 직업 */
+.job-mbti-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  margin: 30px 0;
+}
+
+.frontend-wrap {
+  padding: 8.5px 19px;
+  border-radius: 26px;
+  font-size: 16px;
+  background-color: #222222;
+  color: white;
+  font-weight: 300;
+}
+
+/* MBTI */
+.mbti-wrap {
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.introduce p {
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 30px;
+}
+
+/* -------------------중앙 ------------------------------*/
+.profile-mid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  gap: 32px;
+}
+
+/* 제목 */
+.experience-title,
+.skills-title,
+.education-title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 30px;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+.experience-title::after,
+.skills-title::after,
+.hobbies-title::after,
+.contact-title::after,
+.education-title::after {
+  content: "";
+  display: inline-block;
+  width: 23px;
+  height: 60px;
+  background-image: url("../img/Deco.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin: 7px 0 0 1px;
+}
+
+.experience-container,
+.skills-container {
+  padding: 33px;
+}
+
+.hard-list {
+  margin: 18px 0 36px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.soft-list {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hard-items,
+.soft-items {
+  padding: 3px 15px;
+  border-radius: 26px;
+  font-size: 16px;
+  border: 2px solid #222222;
+  font-weight: 600;
+}
+
+/* 연도 표기 */
+.timeline {
+  display: grid;
+  gap: 30px;
+}
+
+.timeline-items {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  align-items: start;
+}
+
+.timeline-period {
+  padding: 8.5px 19px;
+  border-radius: 26px;
+  font-size: 16px;
+  background-color: #222222;
+  color: white;
+  font-weight: 200;
+}
+
+/* 본문 표기 */
+.career-title {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.career-desc {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+/* 스킬 */
+.skills-container {
+  padding: 29px 38px 51px 38px;
+}
+
+.skills-title {
+  font-size: 40px;
+  font-weight: 800;
+}
+
+.skills-subtitle {
+  font-size: 16px;
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* ----------------------하단----------------------- */
+.profile-bottom {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 32px;
+}
+
+.hobbies,
+.contact,
+.education {
+  padding: 33px;
+}
+
+.hobbies {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.contact {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.education {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+}
+
+/* 취미 */
+.hobbies-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: transparent;
+  margin-bottom: 15px;
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+.hobbies-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.hobbies-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.hobbies-items img {
+  width: 66px;
+  height: 66px;
+}
+
+/* 연락처 */
+.contact-title {
+  font-size: 40px;
+  font-weight: 800;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #222222;
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-items {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.contact-items img {
+  width: 29px;
+  height: 29px;
+}

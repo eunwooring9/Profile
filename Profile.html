@@ -10,20 +10,24 @@
   </head>
   <body>
     <div class="profile">
-      <!-- 제일 상단 -->
-      <header class="profile-header">
-        <!-- 내 프로필 사진 -->
-        <section class="introduction">
-          <svg></svg>
-          <!-- 이름 -->
-          <div class="myname-wrapper">
+      <!-- 내 프로필 사진 -->
+      <section class="introduction">
+        <div class="my-profile">
+          <img src="img/me.svg" alt="내 사진" />
+        </div>
+        <!-- 이름 -->
+        <div class="myname-container">
+          <div class="myname-wrap">
             <h1 class="myname">EUNWOO CHOI</h1>
-            <svg></svg>
           </div>
           <!-- 직업 / MBTI -->
-          <div class="mbti-wrapper">
-            <span>Frontend Developer</span>
-            <p>MBTI : ENFJ INTJ</p>
+          <div class="job-mbti-container">
+            <div class="frontend-wrap">
+              <p>Frontend Developer</p>
+            </div>
+            <div class="mbti-wrap">
+              <p>MBTI : ENFJ</p>
+            </div>
           </div>
           <div class="introduce">
             <p>
@@ -32,8 +36,8 @@
               마감이나 일정 관리에 책임을 다하는 것이 저의 장점입니다.
             </p>
           </div>
-        </section>
-      </header>
+        </div>
+      </section>
 
       <!-- 중앙 -->
       <div class="profile-mid">
@@ -46,7 +50,7 @@
             <ul class="timeline">
               <li class="timeline-items">
                 <!-- 타임라인 -->
-                <div class="timeline-wrapper">
+                <div class="timeline-wrap">
                   <span class="timeline-period">2025-2026</span>
                 </div>
                 <!-- 내용 -->
@@ -72,9 +76,9 @@
         </section>
 
         <!-- Skills -->
-        <section class="skills">
+        <section class="skills-container">
           <h2 class="skills-title">SKILLS</h2>
-          <div class="skills-container">
+          <div class="skills">
             <!-- Hard skills -->
             <h3 class="skills-subtitle">Hard Skills</h3>
             <ul class="hard-list">
@@ -86,7 +90,7 @@
               <li class="hard-items">Unity</li>
             </ul>
           </div>
-          <div class="skills-container">
+          <div class="skills">
             <!-- Soft Skills -->
             <h3 class="skills-subtitle">Soft Skills</h3>
             <ul class="soft-list">
@@ -106,15 +110,15 @@
           <h2 class="hobbies-title">HOBBIES</h2>
           <ul class="hobbies-list">
             <li class="hobbies-items">
-              <svg></svg>
+              <img src="./img/Fencing.svg" alt="펜싱" />
               Fencing
             </li>
             <li class="hobbies-items">
-              <svg></svg>
+              <img src="./img/Studying.svg" alt="연필" />
               Studying
             </li>
             <li class="hobbies-items">
-              <svg></svg>
+              <img src="./img/Reading.svg" alt="책" />
               Reading
             </li>
           </ul>
@@ -125,15 +129,15 @@
           <h2 class="contact-title">CONTACT</h2>
           <ul class="contact-list">
             <li class="contact-items">
-              <svg></svg>
+              <img src="./img/phone.svg" alt="전화기" />
               010 - 5846 - 6485
             </li>
             <li class="contact-items">
-              <svg></svg>
+              <img src="./img/mail.svg" alt="메일" />
               eunwooring9@gmail.com
             </li>
             <li class="contact-items">
-              <svg></svg>
+              <img src="./img/map.svg" alt="위치" />
               Republic of Korea
             </li>
           </ul>
@@ -145,7 +149,7 @@
           <ul class="timeline">
             <li class="timeline-items">
               <!-- 타임라인 -->
-              <div class="timeline-wrapper">
+              <div class="timeline-wrap">
                 <span class="timeline-period">2022-2023</span>
               </div>
               <!-- 내용 -->
@@ -155,7 +159,7 @@
               </div>
             </li>
             <li class="timeline-items">
-              <div class="">
+              <div class="timeline-wrap">
                 <span class="timeline-period">2020-2021</span>
               </div>
               <div class="career-container">
