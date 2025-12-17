@@ -115,8 +115,6 @@
   .introduction {
     display: flex;
     flex-direction: column;
-    text-align: center;
-    position: relative;
     padding: 36px 31px;
     transition: all 0.3s;
   }
@@ -135,11 +133,14 @@
 
   .myname {
     font-size: 30px;
+    transition: all 0.3s;
   }
 
   .myname::after {
     width: 18px;
     height: 48px;
+    margin: 1px 0 0 0;
+    transition: all 0.3s;
   }
 
   .my-profile {
@@ -157,57 +158,158 @@
   .frontend-wrap {
     font-size: 12px;
     white-space: nowrap;
+    padding: 6px 7px;
+
+    transition: all 0.3s;
   }
 
   .mbti-wrap {
     font-size: 13px;
     white-space: nowrap;
+    transition: all 0.3s;
   }
 
   .introduce {
     order: 4;
     transition: all 0.3s;
+    transition: all 0.3s;
   }
 
   .introduce p {
-    font-size: 12px;
+    font-size: 16px;
+    transition: all 0.3s;
   }
 
   .profile-mid {
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
+    transition: all 0.3s;
   }
 
   .timeline {
     display: grid;
+    transition: all 0.3s;
   }
 
   .timeline-items {
     display: grid;
     grid-template-columns: 115px 1fr;
+    transition: all 0.3s;
   }
 
   .experience-container,
   .skills-container {
     padding: 15px;
+    margin: 0 auto;
+    transition: all 0.3s;
   }
 
   .career-title {
     font-size: 15px;
+    transition: all 0.3s;
   }
 
   .career-desc {
     font-size: 12px;
+    transition: all 0.3s;
   }
 
   .timeline-period {
     font-size: 12px;
     padding: 5px 10px;
+    transition: all 0.3s;
   }
 
-  .experience-title {
+  .experience-title,
+  .skills-title,
+  .education-title,
+  .hobbies-title,
+  .contact-title {
     font-size: 30px;
     margin-bottom: 10px;
+    transition: all 0.3s;
+  }
+
+  .profile-bottom {
+    display: grid;
+    grid-template-columns: 1fr;
+    transition: all 0.3s;
+  }
+
+  .hobbies,
+  .contact,
+  .education {
+    grid-column: auto;
+    grid-row: auto;
+    padding: 15px;
+    transition: all 0.3s;
+  }
+
+  .timeline-second {
+    display: grid;
+    transition: all 0.3s;
+  }
+
+  .timeline-items-second {
+    display: grid;
+    grid-template-columns: 115px 1fr;
+    transition: all 0.3s;
+  }
+
+  .skills-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    transition: all 0.3s;
+  }
+
+  .hard-list {
+    margin: 18px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    transition: all 0.3s;
+  }
+
+  .hobbies-title::after,
+  .contact-title::after {
+    width: 18px;
+    height: 46px;
+    transition: all 0.3s;
+  }
+
+  .experience-title::after,
+  .skills-title::after,
+  .education-title::after {
+    margin: 2px 0 0 0;
+    width: 18px;
+    height: 46px;
+    transition: all 0.3s;
+  }
+
+  .hobbies-list img {
+    width: 46px;
+    height: 46px;
+    transition: all 0.3s;
+  }
+
+  .contact-list > li {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-size: 17px;
+    font-weight: 400;
+    transition: all 0.3s;
+  }
+
+  .career-desc::before {
+    content: "";
+    width: 1px;
+    height: 85%;
+    background-color: #222;
+    position: absolute;
+    top: 50%;
+    left: -25px;
+    transition: all 0.3s;
   }
 }
