@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/pretendard/dist/web/static/pretendard.css");
+
 /* 전체! */
 .profile {
   width: 100%;
@@ -118,7 +120,7 @@
   font-size: 40px;
   font-weight: 800;
   margin-bottom: 30px;
-  color: transparent;
+  color: #e7e2df;
   -webkit-text-stroke: 1.5px #222;
   transition: all 0.7s;
   display: flex;
