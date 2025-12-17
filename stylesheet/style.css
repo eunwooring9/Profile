@@ -2,14 +2,14 @@
 .profile {
   width: 100%;
   max-width: 1152px;
-  background-color: #222222;
-  padding: 38px;
+  background-color: #222;
+  padding: 37px;
   margin: 0 auto;
   font-family: pretendard;
   box-sizing: border-box;
 }
 
-/* 박스 컬러 */
+/* -------------박스 컬러----------------------- */
 .introduction,
 .experience-container,
 .skills-container,
@@ -19,27 +19,23 @@
   background-color: #e7e2df;
 }
 
-/* 상단 박스 */
+/* ------------------상단 박스 --------------------*/
 .introduction {
   display: grid;
   gap: 59px;
   width: 100%;
-  height: 391px;
-  grid-template-columns: minmax(200px, 293px) 1fr;
+  grid-template-columns: minmax(293px, 330px) 1fr;
   padding: 30px 66px;
 }
 
-/* 프로필 사진 */
+/* -------------프로필 사진------------------------- */
 .my-profile {
   flex-shrink: 0;
-  width: 293px;
-  height: 330px;
 }
 
 .my-profile img {
   width: 100%;
   height: 100%;
-  box-shadow: 7px 10px rgba(0, 0, 0, 0.2);
 }
 
 .myname-container {
@@ -48,7 +44,7 @@
   flex-grow: 1;
 }
 
-/* 이름 */
+/* ------------------이름 ------------------------*/
 .myname-wrap {
   width: 100%;
   display: flex;
@@ -58,7 +54,10 @@
 
 .myname {
   font-size: 65px;
-  font-weight: 700;
+  font-weight: 800;
+  display: flex;
+  gap: 3px;
+  white-space: nowrap;
 }
 
 .myname::after {
@@ -70,11 +69,9 @@
   background-image: url("../img/Deco2.svg");
   background-repeat: no-repeat;
   background-size: contain;
-  vertical-align: middle;
-  margin: 0 0 7px 4px;
 }
 
-/* 직업 */
+/* ----------------직업------------------------- */
 .job-mbti-container {
   display: flex;
   justify-content: center;
@@ -87,12 +84,12 @@
   padding: 8.5px 19px;
   border-radius: 26px;
   font-size: 16px;
-  background-color: #222222;
+  background-color: #222;
   color: white;
   font-weight: 300;
 }
 
-/* MBTI */
+/* -------------------MBTI------------------------------- */
 .mbti-wrap {
   font-size: 22px;
   font-weight: 500;
@@ -113,7 +110,7 @@
   gap: 32px;
 }
 
-/* 제목 */
+/* ---------------제목---------------------------- */
 .experience-title,
 .skills-title,
 .education-title {
@@ -121,7 +118,13 @@
   font-weight: 800;
   margin-bottom: 30px;
   color: transparent;
-  -webkit-text-stroke: 1.5px #222222;
+  -webkit-text-stroke: 1.5px #222;
+  transition: all 0.7s;
+}
+
+.experience-container:hover > .experience-title {
+  color: #222;
+  transition: all 0.3s;
 }
 
 .experience-title::after,
@@ -145,33 +148,15 @@
   padding: 33px;
 }
 
-.hard-list {
-  margin: 18px 0 36px 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.soft-list {
-  margin-top: 18px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
-
-.hard-items,
-.soft-items {
-  padding: 3px 15px;
-  border-radius: 26px;
-  font-size: 16px;
-  border: 2px solid #222222;
-  font-weight: 600;
-}
-
-/* 연도 표기 */
+/* ---------------연도 표기---------------------- */
 .timeline {
   display: grid;
   gap: 30px;
+}
+
+.timeline-second {
+  display: grid;
+  row-gap: 80px;
 }
 
 .timeline-items {
@@ -185,25 +170,54 @@
   padding: 8.5px 19px;
   border-radius: 26px;
   font-size: 16px;
-  background-color: #222222;
+  background-color: #222;
   color: white;
   font-weight: 200;
 }
 
-/* 본문 표기 */
+/*---------------- 본문 표기 ----------------------*/
+
 .career-title {
   font-size: 21px;
   font-weight: 700;
+  position: relative;
+}
+
+.career-title::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: -34px;
+  position: absolute;
+  background: center / 100% 100% no-repeat url("../img/star.svg");
 }
 
 .career-desc {
   font-size: 18px;
   font-weight: 400;
+  padding: 14px 0;
+  position: relative;
 }
 
-/* 스킬 */
+.career-desc::before {
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: #222;
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+}
+
+/* ---------------스킬 -----------------*/
 .skills-container {
-  padding: 29px 38px 51px 38px;
+  padding: 29px 38px;
+}
+
+.skills-container:hover > .skills-title {
+  color: #222;
+  transition: all 0.3s;
 }
 
 .skills-title {
@@ -221,6 +235,43 @@
   align-items: flex-start;
 }
 
+.hard-list {
+  margin: 18px 0 36px 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.soft-list {
+  margin-top: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hard-list > li,
+.soft-list > li {
+  padding: 3px 15px;
+  border-radius: 26px;
+  font-size: 16px;
+  border: 2px solid #222;
+  font-weight: 600;
+}
+
+.hard-list > li:nth-child(2) {
+  background-color: #222;
+  color: white;
+}
+
+.hard-list > li:nth-child(3) {
+  background-color: #222;
+  color: white;
+}
+
+.hard-list > li:nth-child(4) {
+  background-color: #222;
+  color: white;
+}
 /* ----------------------하단----------------------- */
 .profile-bottom {
   display: grid;
@@ -250,13 +301,19 @@
   grid-row: 1 / 3;
 }
 
-/* 취미 */
+/* ---------------취미 ---------------------*/
 .hobbies-title {
   font-size: 40px;
   font-weight: 800;
   color: transparent;
   margin-bottom: 15px;
-  -webkit-text-stroke: 1.5px #222222;
+  -webkit-text-stroke: 1.5px #222;
+  transition: all 0.7s;
+}
+
+.hobbies:hover > .hobbies-title {
+  color: #222;
+  transition: all 0.3s;
 }
 
 .hobbies-list {
@@ -265,7 +322,7 @@
   align-items: center;
 }
 
-.hobbies-items {
+.hobbies-list > li {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -274,17 +331,22 @@
   font-weight: 300;
 }
 
-.hobbies-items img {
+.hobbies-list img {
   width: 66px;
   height: 66px;
 }
 
-/* 연락처 */
+/* ----------------연락처--------------------- */
 .contact-title {
   font-size: 40px;
   font-weight: 800;
   color: transparent;
-  -webkit-text-stroke: 1.5px #222222;
+  -webkit-text-stroke: 1.5px #222;
+}
+
+.contact:hover > .contact-title {
+  color: #222;
+  transition: all 0.3s;
 }
 
 .contact-list {
@@ -293,7 +355,7 @@
   gap: 10px;
 }
 
-.contact-items {
+.contact-list > li {
   display: flex;
   align-items: center;
   gap: 30px;
@@ -301,7 +363,20 @@
   font-weight: 400;
 }
 
-.contact-items img {
-  width: 29px;
-  height: 29px;
+.contact-list img {
+  width: 30px;
+  height: 30px;
+}
+
+/* ------------------- Education------------------- */
+.education:hover > .education-title {
+  color: #222;
+  transition: all 0.3s;
+}
+
+.timeline-items-second {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 12px;
+  align-items: start;
 }
