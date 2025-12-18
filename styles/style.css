@@ -206,6 +206,8 @@
   height: 20px;
   left: -34px;
   position: absolute;
+  animation: spin-and-back 5s ease-in-out infinite;
+  transform-origin: center;
   background: center / 100% 100% no-repeat url("../assets/img/star.svg");
 }
 
@@ -225,6 +227,21 @@
   top: 50%;
   left: -25px;
   transform: translateY(-50%);
+}
+
+@keyframes spin-and-back {
+  0% {
+    transform: rotate(0deg);
+  }
+  30% {
+    transform: rotate(360deg);
+  }
+  60% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 
 /* ---------------스킬 -----------------*/
@@ -273,6 +290,13 @@
   font-size: 16px;
   border: 2px solid #222;
   font-weight: 600;
+  transition: all 0.5s;
+}
+
+.hard-list > li:hover,
+.soft-list > li:hover {
+  transform: scale(1.1);
+  transition: all 0.3s;
 }
 
 .hard-list > li:nth-child(2) {
@@ -351,6 +375,12 @@
 .hobbies-list img {
   width: 66px;
   height: 66px;
+  transition: all 0.3s;
+}
+
+.hobbies-list > li:hover img {
+  transform: scale(1.2);
+  transition: all 0.3s;
 }
 
 /* ----------------연락처--------------------- */
@@ -383,6 +413,17 @@
 .contact-list img {
   width: 30px;
   height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.contant-list li:hover img {
+  transform: scale(1.2);
+}
+
+.contact-list > li:hover .spin-phone,
+.contact-list > li:hover .spin-mail,
+.contact-list > li:hover .spin-map {
+  transform: scale(1.2);
 }
 
 /* ------------------- Education------------------- */
